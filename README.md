@@ -94,14 +94,14 @@ print("Current GPIO states:", gpio_manager.get_gpio_state_all())
 + `Output :` `None` 
 + Stops the GPIO control daemon.
 
-## Example Code
-### This Example Reads and Toggle the state of OUTPUT_PIN_1
+## Example - 1
+### This example reads and toggle the state of OUTPUT_PIN_1
 ```python
 from ExternalGPIOController import ExternalGPIOController
 import time
 
 # Initialize the GPIO manager
-gpio_manager = ExternalGPIOController()
+gpio_manager = ExternalGPIOController() #takes the default port
 gpio_manager.start_daemon()
 
 # try:
@@ -112,4 +112,23 @@ while True:
     print("Current GPIO states:", gpio_manager.get_gpio_state_all())
     # Sleep for a short duration to avoid running the loop too fast
     time.sleep(0.1)
+```
+## Example - 2
+### Read the state at the INPUT_PIN_3 and set the sate of OUTPUT_PIN_3
+```python
+from ExternalGPIOController import ExternalGPIOController
+
+# Initialize the GPIO manager
+gpio_manager = ExternalGPIOController(port='/dev/ttyUSB1') #specifing a port
+gpio_manager.start_daemon()
+
+while True:
+    
+    print(gpio_manager.get_gpio_state_all())
+    if gpio_manager.get_gpio_state(gpio_manager.INPUT_PIN_3) == 1:
+            gpio_manager.set_gpio(gpio_manager.OUTPUT_PIN_3, gpio_manager.PIN_HIGH)
+            print(" 3 is high")
+    else:
+            gpio_manager.set_gpio(gpio_manager.OUTPUT_PIN_3, gpio_manager.PIN_LOW)
+            print(" 3 is low")
 ```
