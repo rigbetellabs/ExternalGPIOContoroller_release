@@ -5,7 +5,7 @@ This documentation provides an example of how to use the `ExternalGPIOController
 ## 1. Installation
 ### Install ExternalGPIOController library
 ```sh
-pip install git+https://github.com/rigbetellabs/ExternalGPIOController.git
+pip install git+https://github.com/rigbetellabs/ExternalGPIOContoroller_release.git
 ```
 
 ## 2. Usage
