@@ -70,11 +70,20 @@ gpio_manager.set_gpio(gpio_manager.OUTPUT_PIN_1,gpio_manager.PIN_HIGH))
 + `Input :` `int` PinNumber
 + `Output :` `int` Returns `0`/ `LOW` or `1` / `HIGH` specifying the state of GPIO  
 +  Returns the current state of a specified GPIO pin.
+For Example We Can set the   of `OUTPUT_PIN_1` to `HIGH`  using `get_gpio_state(pin)`
+```python
+gpio_manager.set_gpio(gpio_manager.OUTPUT_PIN_1,gpio_manager.PIN_HIGH)) 
+``` 
 
 ### `get_gpio_state_all()`
 + `Input :` `None` 
 + `Output :` `int []` Returns array with `0`/ `LOW` or `1` / `HIGH` specifying the state of all GPIO  
 + Returns the current states of all GPIO pins as a dictionary.
+
+```python
+# Print the current states of all GPIO pins
+print("Current GPIO states:", gpio_manager.get_gpio_state_all())
+```
 
 ### `start_daemon()`
 + `Input :`  `None` 
