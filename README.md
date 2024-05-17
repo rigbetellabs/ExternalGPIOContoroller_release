@@ -6,7 +6,7 @@ This documentation provides an example of how to use the `ExternalGPIOController
 ### Installing USB Drivers (For Windows)
 Install [CP210x USB to UART Bridge for Serial Communication](https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers?tab=downloads)
 
-![alt text](imgs/image.png) 
+![alt text](Imgs/image.png) 
 ### Install ExternalGPIOController library
 ```sh
 pip install git+https://github.com/rigbetellabs/ExternalGPIOContoroller_release.git
@@ -30,7 +30,7 @@ gpio_manager.start_daemon()
 Find Port Number on Windows
 + Open Device Manager, and expand the Ports (COM & LPT) list.
 + `COM` Ports will be listed as below
- ![alt text](imgs/image1.png)
+ ![alt text](Imgs/image1.png)
 
 + Like we can see the `COM` ports is `COM7`
 
@@ -39,7 +39,7 @@ Find Port Number on Windows
 ~~~sh
 ls /dev/tty*
 ~~~ 
-![alt text](imgs/image2.png)
+![alt text](Imgs/image2.png)
 
 ## 3. API Reference
 ### `set_gpio(pin, state)`
