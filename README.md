@@ -42,6 +42,24 @@ ls /dev/tty*
 ![alt text](Imgs/image2.png)
 
 ## 3. API Reference
+### Input Pins
+Input GPIOS are INPUT_PIN_1, INPUT_PIN_2, INPUT_PIN_3, INPUT_PIN_4 and INPUT_PIN_5 Only
+For Example We Can read the state Input using `get_gpio_state(pin)` of `INPUT_PIN_1` 
+```python
+ gpio_manager.get_gpio_state(gpio_manager.INPUT_PIN_1)
+``` 
+### Output Pins
+Outputs Pins for Output are as follows `OUTPUT_PIN_1`,`OUTPUT_PIN_2`,`OUTPUT_PIN_3`,`OUTPUT_PIN_4` and`OUTPUT_PIN_5` only
+For Example We Can set the   of `OUTPUT_PIN_1` to `HIGH` 
+```python
+gpio_manager.set_gpio(gpio_manager.OUTPUT_PIN_1,gpio_manager.PIN_HIGH)) 
+``` 
+### Pim State
+Pin state are indicated by `PIN_HIGH` or `PIN_HIGH` thats for setting Pin to `HIGH or LOW` respectively.
+For Example We Can set the   of `OUTPUT_PIN_1` to `HIGH` 
+```python
+gpio_manager.set_gpio(gpio_manager.OUTPUT_PIN_1,gpio_manager.PIN_HIGH)) 
+``` 
 ### `set_gpio(pin, state)`
 + `Input :` `int` PinNumber , `bool`state
 + `Output :` `int` Returns `0`/ `LOW` or `1` / `HIGH` specifying the state of GPIO  
