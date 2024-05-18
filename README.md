@@ -17,7 +17,7 @@ Below is an example of how to use the ExternalGPIOController library in your cod
 ### 1. Importing package and Initialization
 #### Importing the library `ExternalGPIOController`
 ```
-from ExternalGPIOController.ExternalGPIOController import ExternalGPIOController
+from ExternalGPIOController import ExternalGPIOController
 ```
 #### Initialize the GPIO manager object
 `Parmeters :` ( `port` = '/dev/ttyUSB0', `baudrate` = 115200, `timeout` = 1) (Default Values)
